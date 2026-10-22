@@ -1,4 +1,6 @@
 import { FaTripadvisor } from "react-icons/fa";
+import { GiCamel } from "react-icons/gi";
+import { FaCity } from "react-icons/fa6";
 
 export function InstagramIcon({ size = 16, className = "" }: { size?: number; className?: string }) {
   return (
@@ -71,4 +73,12 @@ export const TwitterIcon = XIcon;
 
 export function TripadvisorIcon({ size = 16, className = "" }: { size?: number; className?: string }) {
   return <FaTripadvisor size={size} className={className} />;
+}
+
+export function DesertIcon({ size = 16, className = "" }: { size?: number; className?: string }) {
+  return <GiCamel size={size} className={className} />;
+}
+
+export function CityIcon({ size = 16, className = "" }: { size?: number; className?: string }) {
+  return <FaCity size={size} className={className} />;
 }

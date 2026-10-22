@@ -11,13 +11,20 @@ import {
   XIcon,
   YoutubeIcon,
 } from "@/components/ui/SocialIcons";
-import { WHATSAPP_URL, navLinks, services } from "@/components/data/content";
-import { ServicesDropdown } from "@/components/ui/ServicesDropdown";
+import {
+  WHATSAPP_URL,
+  navLinks,
+  desertAdventurePackages,
+  citySightseeingPackages,
+} from "@/components/data/content";
+import { PackagesDropdown } from "@/components/ui/PackagesDropdown";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [packagesOpen, setPackagesOpen] = useState(false);
+  const [mobilePackagesOpen, setMobilePackagesOpen] = useState(false);
+  const [mobileDesertOpen, setMobileDesertOpen] = useState(false);
+  const [mobileCityOpen, setMobileCityOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -41,7 +48,7 @@ export function Header() {
         } else if (currentScrollY > lastScrollY.current + 5) {
           // Scrolling DOWN - hide header and close dropdowns
           setIsVisible(false);
-          setServicesOpen(false);
+          setPackagesOpen(false);
           setMobileMenuOpen(false);
         }
       }
@@ -59,7 +66,7 @@ export function Header() {
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setServicesOpen(false);
+        setPackagesOpen(false);
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -68,15 +75,13 @@ export function Header() {
 
   return (
     <div
-      className={`left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled
-          ? `fixed top-3 px-4 md:px-8 lg:px-10 ${
-              isVisible
-                ? "translate-y-0 opacity-100"
-                : "-translate-y-24 opacity-0 pointer-events-none"
-            }`
-          : "absolute top-0 px-0 translate-y-0 opacity-100"
-      }`}
+      className={`left-0 right-0 z-40 transition-all duration-300 ${isScrolled
+        ? `fixed top-3 px-4 md:px-8 lg:px-10 ${isVisible
+          ? "translate-y-0 opacity-100"
+          : "-translate-y-24 opacity-0 pointer-events-none"
+        }`
+        : "absolute top-0 px-0 translate-y-0 opacity-100"
+        }`}
     >
       {/* Top utility bar - visible before scroll */}
       {!isScrolled && (
@@ -203,19 +208,20 @@ export function Header() {
               }`}
           >
             {navLinks.map((link) => {
-              if (link.label === "Our services") {
+              // Packages menu with full-width category & package switcher dropdown
+              if (link.label === "Packages") {
                 return (
                   <div
                     key={link.label}
                     ref={dropdownRef}
                     className="relative"
-                    onMouseEnter={() => setServicesOpen(true)}
-                    onMouseLeave={() => setServicesOpen(false)}
+                    onMouseEnter={() => setPackagesOpen(true)}
+                    onMouseLeave={() => setPackagesOpen(false)}
                   >
                     <button
                       type="button"
-                      onClick={() => setServicesOpen((prev) => !prev)}
-                      aria-expanded={servicesOpen}
+                      onClick={() => setPackagesOpen((prev) => !prev)}
+                      aria-expanded={packagesOpen}
                       className={`group inline-flex whitespace-nowrap items-center gap-1.5 py-2 text-sm font-medium transition-colors ${isScrolled
                         ? "text-[#1E1E1E] hover:text-[#8B181B]"
                         : "!text-white hover:opacity-80"
@@ -225,12 +231,9 @@ export function Header() {
                       <Plus
                         size={17}
                         strokeWidth={2.4}
-                        className={`transition-transform duration-300 ${servicesOpen
-                          ? "rotate-45 " + (isScrolled ? "text-[#8B181B]" : "text-[#FFD36D]")
-                          : isScrolled
-                            ? "text-[#1E1E1E]"
-                            : "text-white"
-                          }`}
+                        className={`transition-transform duration-300 ${
+                          packagesOpen ? "rotate-45" : ""
+                        } ${isScrolled ? "text-[#1E1E1E]" : "text-white"}`}
                       />
                       <span
                         className={`absolute bottom-0 left-0 h-px w-0 transition-all duration-300 group-hover:w-full ${isScrolled ? "bg-[#8B181B]" : "bg-white"
@@ -238,15 +241,16 @@ export function Header() {
                       />
                     </button>
 
-                    {/* Extracted Services Dropdown Component */}
-                    <ServicesDropdown
-                      isOpen={servicesOpen}
-                      onClose={() => setServicesOpen(false)}
+                    {/* Full Width Packages Dropdown */}
+                    <PackagesDropdown
+                      isOpen={packagesOpen}
+                      onClose={() => setPackagesOpen(false)}
                     />
                   </div>
                 );
               }
 
+              // Standard Navigation Link (including Our services without dropdown)
               return (
                 <Link
                   key={link.label}
@@ -305,36 +309,86 @@ export function Header() {
           >
             <nav className="flex flex-col">
               {navLinks.map((link) => {
-                if (link.label === "Our services") {
+                // Mobile Packages Accordion with Desert Adventure & City Sightseeing submenus
+                if (link.label === "Packages") {
                   return (
                     <div key={link.label} className="border-b border-black/5 py-3">
                       <button
                         type="button"
-                        onClick={() => setMobileServicesOpen((prev) => !prev)}
+                        onClick={() => setMobilePackagesOpen((prev) => !prev)}
                         className="flex w-full items-center justify-between text-left text-sm font-medium text-[#242424] transition-colors hover:text-[#8B181B]"
                       >
                         <span>{link.label}</span>
                         <Plus
                           size={16}
-                          className={`transition-transform duration-200 ${mobileServicesOpen ? "rotate-45 text-[#8B181B]" : "text-black/60"
+                          className={`transition-transform duration-200 ${mobilePackagesOpen ? "rotate-45 text-[#8B181B]" : "text-black/60"
                             }`}
                         />
                       </button>
-                      {mobileServicesOpen && (
-                        <div className="mt-2.5 max-h-56 space-y-2 overflow-y-auto pl-3 pr-1 pt-1">
-                          {services.map((service) => (
-                            <Link
-                              key={service.title}
-                              href="#services"
-                              onClick={() => {
-                                setMobileMenuOpen(false);
-                                setMobileServicesOpen(false);
-                              }}
-                              className="block py-1 text-xs text-[#555] transition-colors hover:text-[#8B181B]"
+
+                      {mobilePackagesOpen && (
+                        <div className="mt-3 space-y-2.5 pl-3 pr-1 pt-1">
+                          {/* Desert Adventure Subcategory */}
+                          <div>
+                            <button
+                              type="button"
+                              onClick={() => setMobileDesertOpen((prev) => !prev)}
+                              className="flex w-full items-center justify-between py-1 text-xs font-bold text-[#8B181B]"
                             >
-                              {service.title}
-                            </Link>
-                          ))}
+                              <span>Desert Adventure ({desertAdventurePackages.length})</span>
+                              <span className="text-[11px] font-normal text-black/50">
+                                {mobileDesertOpen ? "−" : "+"}
+                              </span>
+                            </button>
+                            {mobileDesertOpen && (
+                              <div className="mt-1 space-y-1.5 pl-2 max-h-48 overflow-y-auto">
+                                {desertAdventurePackages.map((pkg) => (
+                                  <Link
+                                    key={pkg.title}
+                                    href={pkg.href}
+                                    onClick={() => {
+                                      setMobileMenuOpen(false);
+                                      setMobilePackagesOpen(false);
+                                    }}
+                                    className="block py-1 text-[11px] text-[#555] hover:text-[#8B181B]"
+                                  >
+                                    {pkg.title}
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+
+                          {/* City Sightseeing Subcategory */}
+                          <div className="border-t border-black/5 pt-2">
+                            <button
+                              type="button"
+                              onClick={() => setMobileCityOpen((prev) => !prev)}
+                              className="flex w-full items-center justify-between py-1 text-xs font-bold text-[#8B181B]"
+                            >
+                              <span>City Sightseeing ({citySightseeingPackages.length})</span>
+                              <span className="text-[11px] font-normal text-black/50">
+                                {mobileCityOpen ? "−" : "+"}
+                              </span>
+                            </button>
+                            {mobileCityOpen && (
+                              <div className="mt-1 space-y-1.5 pl-2 max-h-48 overflow-y-auto">
+                                {citySightseeingPackages.map((pkg) => (
+                                  <Link
+                                    key={pkg.title}
+                                    href={pkg.href}
+                                    onClick={() => {
+                                      setMobileMenuOpen(false);
+                                      setMobilePackagesOpen(false);
+                                    }}
+                                    className="block py-1 text-[11px] text-[#555] hover:text-[#8B181B]"
+                                  >
+                                    {pkg.title}
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
+                          </div>
                         </div>
                       )}
                     </div>

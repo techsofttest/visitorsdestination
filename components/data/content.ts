@@ -2,12 +2,43 @@ export const WHATSAPP_URL =
   "https://wa.me/971544278880?text=Hello%20Visitors%20Destination%2C%20I%27d%20like%20to%20plan%20a%20trip.";
 
 export const navLinks = [
-  { label: "Our services", href: "#services" },
-  { label: "Desert Adventure", href: "#desert-adventure" },
-  { label: "City Sightseeing", href: "#city-sightseeing" },
+  { label: "Home", href: "/" },
   { label: "Our story", href: "#about" },
-  { label: "Blogs", href: "#blogs" },
+  { label: "Packages", href: "#packages" },
+  { label: "Our services", href: "#services" },
+  { label: "Blog", href: "#blogs" },
   { label: "FAQ", href: "#faq" },
+];
+
+export const desertAdventurePackages = [
+  { title: "Evening Desert Safari Abu Dhabi", href: "#packages", desc: "Dune bashing, BBQ dinner, shows & sunset views" },
+  { title: "Abu Dhabi Morning Desert Safari", href: "#packages", desc: "Morning dunes, sandboarding & camel ride" },
+  { title: "Sunrise Desert Safari Abu Dhabi", href: "#packages", desc: "Experience sunrise over golden desert waves" },
+  { title: "Overnight Desert Camping Abu Dhabi", href: "#packages", desc: "Sleep under a sky of stars with breakfast" },
+  { title: "Romantic Dune Dinner in Abu Dhabi", href: "#packages", desc: "Exclusive private setup with gourmet dining" },
+  { title: "Private Dune Dinner in Abu Dhabi", href: "#packages", desc: "Custom private evening for groups & families" },
+  { title: "Quad Biking Abu Dhabi", href: "#packages", desc: "High-adrenaline ATV ride across dunes" },
+  { title: "Camel Ride Abu Dhabi Tour", href: "#packages", desc: "Traditional desert trek at sunset" },
+  { title: "Liwa Oasis Camping Overnight", href: "#packages", desc: "Venture deep into the Empty Quarter" },
+  { title: "Self Drive in Liwa Desert", href: "#packages", desc: "Conquer the tallest dunes with expert guidance" },
+  { title: "Liwa Sunset Desert Safari", href: "#packages", desc: "Spectacular sunset views in the legendary Rub' al Khali" },
+  { title: "Self Drive in Al Khatim Desert", href: "#packages", desc: "Thrilling self-driven sand dune experience" },
+  { title: "Liwa Oasis Desert Safari", href: "#packages", desc: "Discover historic oasis forts & endless dunes" },
+  { title: "Half Day Desert Safari Abu Dhabi", href: "#packages", desc: "Quick adrenaline-packed desert adventure" },
+];
+
+export const citySightseeingPackages = [
+  { title: "Abu Dhabi Half-Day City Tour", href: "#packages", desc: "Sheikh Zayed Mosque, Corniche & Heritage Village" },
+  { title: "Best Abu Dhabi City Tours", href: "#packages", desc: "Comprehensive highlights of the capital city" },
+  { title: "Dubai Full-Day City Tour From Abu Dhabi", href: "#packages", desc: "Burj Khalifa, Dubai Mall, Marina & Gold Souk" },
+  { title: "Al Ain Full Day City Tour From Abu Dhabi", href: "#packages", desc: "Garden city, Jebel Hafeet & historic oases" },
+  { title: "Al Wathba Fossil Dunes Abu Dhabi Tour", href: "#packages", desc: "Mystical natural fossil rock sculptures" },
+  { title: "East Coast Tour", href: "#packages", desc: "Fujairah coast, Hajar mountains & Khorfakkan" },
+  { title: "Falcon Tour Abu Dhabi", href: "#packages", desc: "Visit world's largest falcon hospital" },
+  { title: "Salt Lake Abu Dhabi", href: "#packages", desc: "Stunning turquoise salt mineral pools" },
+  { title: "Abu Dhabi Dune Buggy Tour", href: "#packages", desc: "Modern off-road buggies with scenic photo stops" },
+  { title: "Grand Mosque and Louvre Museum", href: "#packages", desc: "Iconic architecture & world-class art collection" },
+  { title: "Abu Dhabi Full Day Sightseeing Tour", href: "#packages", desc: "Ultimate exploration with palace & cultural sites" },
 ];
 
 export const heroSlides = [
@@ -42,6 +73,30 @@ export const heroSlides = [
 
 export const services = [
   {
+    title: "Desert Safaris",
+    description: "Golden dunes, sunset views, and thrilling desert adventures.",
+    image: "/services/Desert Safaris.png",
+    tag: "BESTSELLER",
+  },
+  {
+    title: "Overnight safari",
+    description: "Stay beneath a starlit Arabian sky with traditional camp dinner.",
+    image: "/services/Overnight safari.png",
+    tag: "STAY A LITTLE LONGER",
+  },
+  {
+    title: "Airport Meet & Assist",
+    description: "A seamless, VIP arrival experience from the very first step.",
+    image: "/services/Airport Meet & Assist.png",
+    tag: "ARRIVE WITH EASE",
+  },
+  {
+    title: "Hotel Booking",
+    description: "Curated luxury resorts and boutique stays across the UAE.",
+    image: "/services/Hotel Booking.jpg",
+    tag: "STAY YOUR WAY",
+  },
+  {
     title: "Abu Dhabi Tour",
     description: "Discover grand landmarks and local culture.",
     image: "/services/Abu Dhabi Tour.png",
@@ -58,18 +113,6 @@ export const services = [
     description: "Oases, mountain views, and heritage.",
     image: "/services/Al Ain Tour.png",
     tag: "CULTURE & NATURE",
-  },
-  {
-    title: "Desert Safaris",
-    description: "Golden dunes, sunset views, and adventure.",
-    image: "/services/Desert Safaris.png",
-    tag: "BESTSELLER",
-  },
-  {
-    title: "Overnight Safari",
-    description: "Stay beneath a sky full of stars.",
-    image: "photo-1464822759023-fed622ff2c3b",
-    tag: "STAY A LITTLE LONGER",
   },
   {
     title: "Liwa Safari",
@@ -108,22 +151,10 @@ export const services = [
     tag: "PRIVATE TRANSFERS",
   },
   {
-    title: "Airport Meet & Assist",
-    description: "A smoother arrival from the very first step.",
-    image: "photo-1436491865332-7a61a109cc05",
-    tag: "ARRIVE WITH EASE",
-  },
-  {
     title: "Transfers",
     description: "Reliable journeys between every destination.",
     image: "photo-1549317661-bd32c8ce0db2",
     tag: "TRAVEL MADE EASY",
-  },
-  {
-    title: "Hotel Bookings",
-    description: "Find a stay that fits your kind of trip.",
-    image: "photo-1566073771259-6a8506099945",
-    tag: "STAY YOUR WAY",
   },
   {
     title: "Team Building",

@@ -27,7 +27,7 @@ export function ServicesDropdown({
         <div className="mb-2.5 flex items-center justify-between border-b border-black/5 pb-2 text-[12px] font-semibold text-[#8B181B]">
           <span>Services & Tours</span>
         </div>
-        <div className="grid grid-cols-2 gap-1.5 max-h-[520px] max-h-[75vh] overflow-y-auto pr-1">
+        <div className="custom-scrollbar grid grid-cols-2 gap-1.5 max-h-[520px] max-h-[75vh] overflow-y-auto pr-1.5">
           {services.map((item) => (
             <Link
               key={item.title}
