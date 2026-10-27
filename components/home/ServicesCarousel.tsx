@@ -25,7 +25,7 @@ export function ServicesCarousel() {
             {/* View All Services Button */}
             <Link
               href="#services"
-              className="group inline-flex items-center gap-2.5 rounded-lg border border-[#8B181B] bg-transparent px-5 py-2.5 text-sm font-semibold text-[#8B181B] transition-all duration-200 hover:bg-[#8B181B] hover:!text-white shadow-xs"
+              className="group inline-flex items-center gap-2.5 rounded-lg border border-[#B85D19] bg-transparent px-5 py-2.5 text-sm font-semibold text-[#B85D19] transition-all duration-200 hover:bg-[#B85D19] hover:!text-white shadow-xs"
             >
               <span>View all services</span>
               <ArrowUpRight

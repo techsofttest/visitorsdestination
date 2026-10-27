@@ -23,19 +23,19 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Visitors Destination | Discover the Emirates",
-    template: "%s | Visitors Destination",
+    default: "Abu Dhabi Desert Safari | Morning, Evening & Private Tours",
+    template: "%s | Abu Dhabi Desert Safari",
   },
   description:
-    "Discover Abu Dhabi, Dubai, desert safaris, sightseeing tours, private transfers, and memorable UAE travel experiences with Visitors Destination.",
-  metadataBase: new URL("https://visitorsdestination.com"),
+    "Discover Abu Dhabi Desert Safari with morning, evening, overnight, VIP and private dune tours, BBQ dinners, quad biking, and authentic Arabian desert experiences.",
+  metadataBase: new URL("https://abudhabidesert-safari.com"),
   openGraph: {
-    title: "Visitors Destination | Discover the Emirates",
+    title: "Abu Dhabi Desert Safari | Morning, Evening & Private Tours",
     description:
-      "Thoughtfully planned UAE tours, desert adventures, and travel services.",
+      "Official Abu Dhabi desert safari tours, dune bashing, luxury camps, and unforgettable desert experiences.",
     type: "website",
     locale: "en_AE",
-    siteName: "Visitors Destination",
+    siteName: "Abu Dhabi Desert Safari",
   },
   robots: {
     index: true,
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#8B181B",
+  themeColor: "#B85D19",
 };
 
 export default function RootLayout({

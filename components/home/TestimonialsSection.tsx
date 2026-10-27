@@ -61,13 +61,13 @@ export function TestimonialsSection() {
               Every journey matters
             </div>
 
-            {/* Same carousel controls as Services section */}
+            {/* Carousel controls */}
             <div className="hidden shrink-0 gap-2 sm:flex">
               <button
                 type="button"
                 aria-label="Scroll testimonials left"
                 onClick={scrollPrev}
-                className="inline-flex h-11 w-11 items-center justify-center rounded-sm bg-[#F1F0ED] transition-colors hover:bg-[#8B181B] hover:text-white"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-sm bg-[#F1F0ED] transition-colors hover:bg-[#B85D19] hover:text-white"
               >
                 <ArrowLeft size={18} />
               </button>
@@ -75,7 +75,7 @@ export function TestimonialsSection() {
                 type="button"
                 aria-label="Scroll testimonials right"
                 onClick={scrollNext}
-                className="inline-flex h-11 w-11 items-center justify-center rounded-sm bg-[#8B181B] text-white transition-colors hover:bg-[#6F1114]"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-sm bg-[#B85D19] text-white transition-colors hover:bg-[#9B4C12]"
               >
                 <ArrowRight size={18} />
               </button>
@@ -95,13 +95,13 @@ export function TestimonialsSection() {
                 >
                   <article
                     className={`flex min-h-[340px] flex-col justify-between rounded-xl p-7 md:p-8 transition-all duration-500 ease-out ${isMiddleActive
-                      ? "bg-[#8B181B] text-white scale-[1.02]"
+                      ? "bg-[#B85D19] text-white scale-[1.02]"
                       : "bg-[#F5F4F1] text-[#242424] opacity-90 hover:opacity-100"
                       }`}
                   >
                     <div>
                       <div
-                        className={`mb-5 text-5xl leading-none transition-colors duration-300 ${isMiddleActive ? "text-[#FDB414]" : "text-[#8B181B]"
+                        className={`mb-5 text-5xl leading-none transition-colors duration-300 ${isMiddleActive ? "text-[#FDB414]" : "text-[#B85D19]"
                           }`}
                         aria-hidden="true"
                       >
@@ -128,7 +128,7 @@ export function TestimonialsSection() {
                       <span
                         className={`flex h-10 w-10 items-center justify-center rounded-full text-sm font-semibold transition-colors duration-300 ${isMiddleActive
                           ? "bg-white/15 text-white"
-                          : "bg-white text-[#8B181B] shadow-sm"
+                          : "bg-white text-[#B85D19] shadow-sm"
                           }`}
                       >
                         {testimonial.name
@@ -147,7 +147,7 @@ export function TestimonialsSection() {
         {/* Mobile controls & indicator */}
         <div className="mt-6 flex items-center justify-between sm:hidden">
           <p className="text-xs text-[#777]">
-            Reviews <span className="mx-1 text-[#8B181B]">·</span>{" "}
+            Reviews <span className="mx-1 text-[#B85D19]">·</span>{" "}
             {String(selectedIndex + 1).padStart(2, "0")} / {String(testimonials.length).padStart(2, "0")}
           </p>
           <div className="flex gap-1.5">
@@ -163,7 +163,7 @@ export function TestimonialsSection() {
               type="button"
               aria-label="Next testimonial"
               onClick={scrollNext}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-sm bg-[#8B181B] text-white"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-sm bg-[#B85D19] text-white"
             >
               <ArrowRight size={17} />
             </button>

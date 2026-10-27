@@ -1,5 +1,5 @@
 export const WHATSAPP_URL =
-  "https://wa.me/971544278880?text=Hello%20Visitors%20Destination%2C%20I%27d%20like%20to%20plan%20a%20trip.";
+  "https://wa.me/971544278880?text=Hello%20Abu%20Dhabi%20Desert%20Safari%2C%20I%27d%20like%20to%20book%20a%20tour.";
 
 export const navLinks = [
   { label: "Home", href: "/" },
@@ -243,7 +243,7 @@ export const testimonials = [
   },
   {
     quote:
-      "From itinerary adjustments to immediate WhatsApp replies, Visitors Destination made travelling with three kids seamless.",
+      "From itinerary adjustments to immediate WhatsApp replies, Abu Dhabi Desert Safari made our trip with three kids completely seamless.",
     name: "Khalid Al-Mansoor",
     detail: "Family travel · Saudi Arabia",
   },

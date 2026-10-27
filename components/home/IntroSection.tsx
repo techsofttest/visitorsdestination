@@ -23,28 +23,28 @@ export function IntroSection() {
       <div className="relative z-10 mx-auto grid max-w-[1280px] items-start gap-8 pt-4 md:grid-cols-[1fr_1.3fr] md:pt-8 lg:gap-12">
         <div>
           <h2 className="font-[family-name:var(--font-bebas)] max-w-lg text-4xl uppercase tracking-[0.03em] leading-[0.95] text-[#1E1E1E] md:text-5xl lg:text-6xl">
-            The best journeys are the ones that <span className="text-[#8B181B]">stay with you.</span>
+            The best journeys are the ones that <span className="text-[#B85D19]">stay with you.</span>
           </h2>
         </div>
         <div className="md:pl-6 lg:pl-10">
           <p className="text-sm leading-7 text-[#2A2A2A] md:text-medium md:leading-5">
-            At Visitors Destination, we bring the Emirates closer through thoughtfully planned tours, desert adventures, and dependable travel services. From your first arrival to your final sunset, we make every part of the journey feel easy.
+            At Abu Dhabi Desert Safari, we bring the Emirates closer through thoughtfully planned tours, desert adventures, and dependable travel services. From your first arrival to your final sunset, we make every part of the journey feel easy.
           </p>
           <div className="mt-8 flex flex-wrap gap-x-8 gap-y-4">
             <div className="flex items-center gap-2 text-sm font-semibold text-[#1A1A1A]">
-              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#8B181B] text-white">
+              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#B85D19] text-white">
                 <Check size={12} strokeWidth={3} />
               </span>
               Thoughtfully planned trips
             </div>
             <div className="flex items-center gap-2 text-sm font-semibold text-[#1A1A1A]">
-              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#8B181B] text-white">
+              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#B85D19] text-white">
                 <Check size={12} strokeWidth={3} />
               </span>
               Friendly local support
             </div>
             <div className="flex items-center gap-2 text-sm font-semibold text-[#1A1A1A]">
-              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#8B181B] text-white">
+              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#B85D19] text-white">
                 <Check size={12} strokeWidth={3} />
               </span>
               Simple, seamless travel

@@ -1,9 +1,16 @@
 import React from "react";
 
-export function SectionLabel({ children }: { children: React.ReactNode }) {
+export function SectionLabel({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
-    <div className="mb-4 flex items-center gap-3 text-sm font-semibold text-[#8B181B]">
-      {/* <span className="h-px w-8 bg-[#FDB414]" /> */}
+    <div
+      className={`mb-4 inline-flex items-center gap-3 text-sm font-semibold text-[#B85D19] ${className}`}
+    >
       {children}
     </div>
   );

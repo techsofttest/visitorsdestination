@@ -1,8 +1,9 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { ArrowDownRight, ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowDownRight, ArrowLeft, ArrowRight } from "lucide-react";
 import { WHATSAPP_URL } from "@/components/data/content";
+import { Button } from "@/components/ui/Button";
 
 const HERO_VIDEOS = [
   {
@@ -35,7 +36,7 @@ export function Hero() {
   }, [activeVideo]);
 
   return (
-    <section aria-label="Featured destinations" className="relative min-h-[690px] h-[88svh] max-h-[940px] bg-[#29231C] text-white overflow-hidden">
+    <section aria-label="Featured destinations" className="relative w-full max-w-full min-h-[690px] h-[88svh] max-h-[940px] bg-[#29231C] text-white overflow-hidden">
       {/* Background Video Slides - Play sequentially one after other */}
       {HERO_VIDEOS.map((video, index) => (
         <div
@@ -63,52 +64,48 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-black/30 z-[1]" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-[1]" />
 
-      {/* Constant Hero Text */}
-      <div className="relative z-[2] mx-auto flex h-full max-w-[1440px] flex-col justify-end px-5 pb-24 pt-36 md:px-10 md:pb-28 lg:px-16">
+      {/* Hero Content */}
+      <div className="relative z-[2] mx-auto flex h-full max-w-[1440px] flex-col justify-end px-5 pb-20 pt-36 md:px-10 md:pb-24 lg:px-16">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-          <h1 className="font-[family-name:var(--font-bebas)] max-w-4xl whitespace-pre-line text-6xl uppercase tracking-[0.03em] leading-[0.88] md:text-8xl lg:text-[112px]">
-            Find your kind{"\n"}of extraordinary.
-          </h1>
-          <div className="flex flex-wrap items-center justify-end gap-4 md:pb-3">
-            <a
-              href="#experiences"
-              className="group inline-flex items-center gap-4 rounded-sm bg-[#FDB414] px-6 py-4 text-sm font-bold !text-[#1E1508] shadow-lg transition-all duration-200 hover:gap-6 hover:bg-white"
-            >
-              Explore experiences <ArrowUpRight size={18} className="text-[#1E1508]" />
-            </a>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-sm bg-black/35 px-5 py-4 text-sm font-semibold !text-white backdrop-blur-md border border-white/20 shadow-lg transition-colors hover:bg-black/50 hover:border-white/40"
-            >
-              Talk to our team <ArrowUpRight size={16} />
-            </a>
+          {/* Main Heading (H1) on Left */}
+          <div className="max-w-2xl lg:max-w-3xl">
+            <h1 className="font-[family-name:var(--font-bebas)] text-5xl uppercase tracking-[0.02em] leading-[0.92] sm:text-6xl md:text-7xl lg:text-8xl">
+              Abu Dhabi Desert Safari – Morning, Evening & Private Tours
+            </h1>
+          </div>
+
+          {/* Description & Action Buttons Aligned to Right Edge */}
+          <div className="flex max-w-lg flex-col items-start gap-5 sm:items-end md:pb-2">
+            <p className="text-sm leading-relaxed text-white/90 sm:text-right md:text-base">
+              Experience the majestic red dunes of Abu Dhabi with exhilarating dune bashing, authentic Bedouin camp hospitality, camel treks, sunset vistas, and 5-star desert adventures.
+            </p>
+
+            <div className="flex flex-wrap items-center justify-start gap-3.5 sm:justify-end">
+              {/* Primary Button */}
+              <Button
+                href="#packages"
+                variant="secondary"
+                size="md"
+                showIcon
+                icon={<ArrowDownRight size={17} className="transition-transform group-hover:translate-y-0.5 group-hover:translate-x-0.5" />}
+              >
+                Explore Tours
+              </Button>
+
+              {/* Secondary Button */}
+              <Button
+                href={WHATSAPP_URL}
+                isExternal
+                variant="glass"
+                size="md"
+                showIcon
+              >
+                Book Now
+              </Button>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Video slide controls aligned to right edge */}
-      {/* <div className="absolute bottom-6 right-5 z-[2] flex items-center justify-end md:bottom-8 md:right-10 lg:right-16">
-        <div className="flex items-center gap-2">
-          <button
-            type="button"
-            aria-label="Previous hero video"
-            onClick={previousSlide}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-white/35 text-white transition-colors hover:border-[#FDB414] hover:bg-[#FDB414] hover:text-[#251A08]"
-          >
-            <ArrowLeft size={18} />
-          </button>
-          <button
-            type="button"
-            aria-label="Next hero video"
-            onClick={nextSlide}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-white/35 text-white transition-colors hover:border-[#FDB414] hover:bg-[#FDB414] hover:text-[#251A08]"
-          >
-            <ArrowRight size={18} />
-          </button>
-        </div>
-      </div> */}
     </section>
   );
 }
