@@ -26,7 +26,7 @@ export default function HomePage() {
       {/* Section 3: "Why Choose Us?" & Trust Signals + Customer Reviews */}
       <WhyChooseUs />
 
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
 
       {/* Section 4: Frequently Asked Questions (FAQ) Accordion */}
       <FaqSection />
