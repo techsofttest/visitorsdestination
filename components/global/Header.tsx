@@ -253,7 +253,7 @@ export function Header() {
                   className={
                     isScrolled
                       ? "!rounded-full px-5 py-2.5 text-sm font-semibold whitespace-nowrap"
-                      : "bg-transparent !text-white hover:bg-transparent hover:opacity-80 py-2 px-0 whitespace-nowrap text-sm font-semibold"
+                      : "bg-transparent !text-white hover:bg-transparent hover:!text-white hover:opacity-80 py-2 px-0 whitespace-nowrap text-sm font-semibold"
                   }
                 >
                   Book Direct

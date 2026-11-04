@@ -159,8 +159,9 @@ export function Footer() {
                 <li><Link href="/about" className="footer-link text-white/95 hover:!text-[#FDB414]">About us</Link></li>
                 <li><Link href="/packages" className="footer-link text-white/95 hover:!text-[#FDB414]">Tours</Link></li>
                 <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Services</Link></li>
-                <li><Link href="#reviews" className="footer-link text-white/95 hover:!text-[#FDB414]">Blog</Link></li>
-                <li><a href="tel:+971544278880" className="footer-link text-white/95 hover:!text-[#FDB414]">Contact</a></li>
+                <li><Link href="/blog" className="footer-link text-white/95 hover:!text-[#FDB414]">Blog</Link></li>
+                <li><Link href="/faq" className="footer-link text-white/95 hover:!text-[#FDB414]">FAQ</Link></li>
+                <li><Link href="/contact" className="footer-link text-white/95 hover:!text-[#FDB414]">Contact</Link></li>
               </ul>
             </div>
 

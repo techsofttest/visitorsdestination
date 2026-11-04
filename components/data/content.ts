@@ -3,11 +3,12 @@ export const WHATSAPP_URL =
 
 export const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Our story", href: "#about" },
-  { label: "Packages", href: "#packages" },
-  { label: "Our services", href: "#services" },
-  { label: "Blog", href: "#blogs" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Our story", href: "/about" },
+  { label: "Packages", href: "/packages" },
+  { label: "Our services", href: "/services" },
+  { label: "Blog", href: "/blog" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const desertAdventurePackages = [

@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import {
-  AboutHero,
-  AboutStats,
-  CompanyOverview,
-  MissionVision,
-  CoreValues,
-  MilestoneTimeline,
-} from "@/components/about";
+import { AboutHero } from "@/components/about/AboutHero";
+import { AboutStats } from "@/components/about/AboutStats";
+import { CompanyOverview } from "@/components/about/CompanyOverview";
+import { MissionVision } from "@/components/about/MissionVision";
+import { CoreValues } from "@/components/about/CoreValues";
+import { MilestoneTimeline } from "@/components/about/MilestoneTimeline";
 import { CtaSection } from "@/components/home/CtaSection";
 
 export const metadata: Metadata = {
