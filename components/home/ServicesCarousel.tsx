@@ -24,7 +24,7 @@ export function ServicesCarousel() {
             </p>
             {/* View All Services Button */}
             <Link
-              href="#services"
+              href="/services"
               className="group inline-flex items-center gap-2.5 rounded-lg border border-[#B85D19] bg-transparent px-5 py-2.5 text-sm font-semibold text-[#B85D19] transition-all duration-200 hover:bg-[#B85D19] hover:!text-white shadow-xs"
             >
               <span>View all services</span>

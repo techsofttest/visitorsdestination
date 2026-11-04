@@ -1,5 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Bebas_Neue, DM_Sans, Playfair_Display } from "next/font/google";
+import { Header } from "@/components/global/Header";
+import { Footer } from "@/components/global/Footer";
+import { FloatingWhatsAppButton } from "@/components/ui/FloatingWhatsAppButton";
 import "./globals.css";
 
 const bebasNeue = Bebas_Neue({
@@ -56,7 +59,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${dmSans.variable} ${playfair.variable} ${bebasNeue.variable}`}>
-      <body className={dmSans.className}>{children}</body>
+      <body className={dmSans.className}>
+        <Header />
+        {children}
+        <Footer />
+        <FloatingWhatsAppButton />
+      </body>
     </html>
   );
 }

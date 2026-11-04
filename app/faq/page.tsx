@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight, HelpCircle, Phone, MessageCircle } from "lucide-react";
-import { Header } from "@/components/global/Header";
-import { Footer } from "@/components/global/Footer";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Button } from "@/components/ui/Button";
 import { WHATSAPP_URL } from "@/components/data/content";
@@ -111,8 +109,6 @@ const FAQ_CATEGORIES: FaqCategory[] = [
 export default function FaqPage() {
   return (
     <main className="min-h-screen bg-white text-[#221C18]">
-      <Header />
-
       {/* Hero Banner */}
       <section className="relative bg-[#1E1A17] pt-36 pb-20 px-5 text-white md:px-10 md:pt-44 md:pb-24">
         <div className="mx-auto max-w-[1280px]">
@@ -219,7 +215,6 @@ export default function FaqPage() {
         </div>
       </section>
 
-      <Footer />
     </main>
   );
 }

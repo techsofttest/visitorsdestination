@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { TripadvisorWidget } from "@/components/ui/TripadvisorWidget";
 import { useEffect, useState } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
 import {
@@ -123,6 +124,10 @@ export function Footer() {
               </div>
 
               <div className="mt-7">
+                <div className="mb-4">
+                  <p className="mb-2 text-xs font-bold uppercase tracking-wider text-white">Review Us on TripAdvisor</p>
+                  <TripadvisorWidget />
+                </div>
                 <p className="text-xs font-bold uppercase tracking-wider text-white">Follow us on</p>
                 <div className="mt-3 flex items-center gap-4 text-white">
                   <a aria-label="Instagram" href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="transition-transform hover:scale-110 hover:text-[#FDB414]">
@@ -137,7 +142,7 @@ export function Footer() {
                   <a aria-label="YouTube" href="https://www.youtube.com/" target="_blank" rel="noreferrer" className="transition-transform hover:scale-110 hover:text-[#FDB414]">
                     <YoutubeIcon size={21} />
                   </a>
-                  <a aria-label="Tripadvisor" href="https://www.tripadvisor.com/" target="_blank" rel="noreferrer" className="transition-transform hover:scale-110 hover:text-[#FDB414]">
+                  <a aria-label="Tripadvisor" href="https://www.tripadvisor.com/UserReview-g294013-d26530014-Visitors_Destination_Tours_Safari-Abu_Dhabi_Emirate_of_Abu_Dhabi.html" target="_blank" rel="noreferrer" className="transition-transform hover:scale-110 hover:text-[#FDB414]">
                     <TripadvisorIcon size={21} />
                   </a>
                 </div>
@@ -151,9 +156,9 @@ export function Footer() {
               </h3>
               <ul className="mt-4 space-y-2.5 text-sm font-medium text-white/95">
                 <li><Link href="/" className="footer-link text-white/95 hover:!text-[#FDB414]">Home</Link></li>
-                <li><Link href="#about" className="footer-link text-white/95 hover:!text-[#FDB414]">About us</Link></li>
-                <li><Link href="#experiences" className="footer-link text-white/95 hover:!text-[#FDB414]">Tours</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Services</Link></li>
+                <li><Link href="/about" className="footer-link text-white/95 hover:!text-[#FDB414]">About us</Link></li>
+                <li><Link href="/packages" className="footer-link text-white/95 hover:!text-[#FDB414]">Tours</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Services</Link></li>
                 <li><Link href="#reviews" className="footer-link text-white/95 hover:!text-[#FDB414]">Blog</Link></li>
                 <li><a href="tel:+971544278880" className="footer-link text-white/95 hover:!text-[#FDB414]">Contact</a></li>
               </ul>
@@ -165,20 +170,20 @@ export function Footer() {
                 Desert Adventures
               </h3>
               <ul className="mt-4 space-y-2.5 text-sm font-medium text-white/95">
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Evening Desert Safari Abu Dhabi</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Abu Dhabi Morning Desert Safari</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Sunrise Desert Safari Abu Dhabi</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Overnight Desert Camping Abu Dhabi</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Romantic Dune Dinner in Abu Dhabi</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Private Dune Dinner in Abu Dhabi</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Quad Biking Abu Dhabi</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Camel Ride Abu Dhabi Tour</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Liwa Oasis Camping Overnight</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Self Drive in Liwa Desert</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Liwa Sunset Desert Safari</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Self Drive in Al Khatim Desert</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Liwa Oasis Desert Safari</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Half Day Desert Safari Abu Dhabi</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Evening Desert Safari Abu Dhabi</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Abu Dhabi Morning Desert Safari</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Sunrise Desert Safari Abu Dhabi</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Overnight Desert Camping Abu Dhabi</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Romantic Dune Dinner in Abu Dhabi</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Private Dune Dinner in Abu Dhabi</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Quad Biking Abu Dhabi</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Camel Ride Abu Dhabi Tour</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Liwa Oasis Camping Overnight</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Self Drive in Liwa Desert</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Liwa Sunset Desert Safari</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Self Drive in Al Khatim Desert</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Liwa Oasis Desert Safari</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Half Day Desert Safari Abu Dhabi</Link></li>
               </ul>
             </div>
 
@@ -188,17 +193,17 @@ export function Footer() {
                 Sightseeing Tours
               </h3>
               <ul className="mt-4 space-y-2.5 text-sm font-medium text-white/95">
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Abu Dhabi Half-Day City Tour</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Best Abu Dhabi City Tours</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Dubai Full-Day City Tour From Abu Dhabi</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Al Ain Full Day City Tour From Abu Dhabi</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Al Wathba Fossil Dunes Abu Dhabi Tour</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">East Coast Tour</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Falcon Tour Abu Dhabi</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Salt Lake Abu Dhabi</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Abu Dhabi Dune Buggy Tour</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Grand Mosque and Louver Museum</Link></li>
-                <li><Link href="#services" className="footer-link text-white/95 hover:!text-[#FDB414]">Abu Dhabi Full Day Sightseeing Tour</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Abu Dhabi Half-Day City Tour</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Best Abu Dhabi City Tours</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Dubai Full-Day City Tour From Abu Dhabi</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Al Ain Full Day City Tour From Abu Dhabi</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Al Wathba Fossil Dunes Abu Dhabi Tour</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">East Coast Tour</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Falcon Tour Abu Dhabi</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Salt Lake Abu Dhabi</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Abu Dhabi Dune Buggy Tour</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Grand Mosque and Louver Museum</Link></li>
+                <li><Link href="/services" className="footer-link text-white/95 hover:!text-[#FDB414]">Abu Dhabi Full Day Sightseeing Tour</Link></li>
               </ul>
 
               <div className="mt-8">
@@ -286,3 +291,4 @@ export function Footer() {
     </footer>
   );
 }
+

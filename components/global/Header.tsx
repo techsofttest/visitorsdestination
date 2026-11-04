@@ -206,20 +206,18 @@ export function Header() {
                         <Plus
                           size={17}
                           strokeWidth={2.4}
-                          className={`transition-transform duration-300 group-data-[state=open]:rotate-45 ${
-                            isScrolled ? "text-[#1E1E1E]" : "text-white"
-                          }`}
+                          className={`transition-transform duration-300 group-data-[state=open]:rotate-45 ${isScrolled ? "text-[#1E1E1E]" : "text-white"
+                            }`}
                         />
                         <span
-                          className={`absolute bottom-0 left-0 h-px w-0 transition-all duration-300 group-hover:w-full group-data-[state=open]:w-full ${
-                            isScrolled ? "bg-[#B85D19]" : "bg-white"
-                          }`}
+                          className={`absolute bottom-0 left-0 h-px w-0 transition-all duration-300 group-hover:w-full group-data-[state=open]:w-full ${isScrolled ? "bg-[#B85D19]" : "bg-white"
+                            }`}
                         />
                       </NavigationMenu.Trigger>
 
                       {/* Dropdown Content managed cleanly through Radix Viewport */}
                       <NavigationMenu.Content className="outline-none">
-                        <PackagesDropdownContent onClose={() => {}} />
+                        <PackagesDropdownContent onClose={() => { }} />
                       </NavigationMenu.Content>
                     </NavigationMenu.Item>
                   );
