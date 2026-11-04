@@ -1,15 +1,18 @@
 import Image from "next/image";
-import { Clock, Star } from "lucide-react";
+import Link from "next/link";
+import { Clock, Star, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { WHATSAPP_URL } from "@/components/data/content";
 import type { DesertPackage } from "@/components/home/FeaturedPackagesSection";
 
 export function PackageCard({ pkg }: { pkg: DesertPackage }) {
+  const detailUrl = `/packages/${pkg.id}`;
+
   return (
     <article className="group flex flex-col justify-between overflow-hidden rounded-xl border border-black/10 bg-white shadow-xs transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-[#B85D19]/40">
       <div>
-        {/* Image & Badges */}
-        <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-[#2D241C]">
+        {/* Image & Badges: Locked 4:3 Aspect Ratio */}
+        <Link href={detailUrl} className="block relative aspect-[4/3] w-full overflow-hidden bg-[#2D241C]">
           <Image
             src={pkg.image}
             alt={pkg.title}
@@ -43,13 +46,15 @@ export function PackageCard({ pkg }: { pkg: DesertPackage }) {
               ({pkg.reviews} reviews)
             </span>
           </div>
-        </div>
+        </Link>
 
         {/* Content */}
         <div className="p-4">
-          <h3 className="font-[family-name:var(--font-bebas)] text-[23px] uppercase tracking-wide leading-tight text-[#111111] transition-colors group-hover:text-[#B85D19]">
-            {pkg.title}
-          </h3>
+          <Link href={detailUrl} className="block">
+            <h3 className="font-[family-name:var(--font-bebas)] text-[23px] uppercase tracking-wide leading-tight text-[#111111] transition-colors group-hover:text-[#B85D19]">
+              {pkg.title}
+            </h3>
+          </Link>
           <p className="mt-1.5 text-[12.5px] text-[#333333] leading-snug line-clamp-2 font-normal">
             {pkg.subtitle}
           </p>
@@ -67,6 +72,17 @@ export function PackageCard({ pkg }: { pkg: DesertPackage }) {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* Read More link */}
+          <div className="mt-3 pt-2.5 border-t border-black/5 flex items-center justify-between">
+            <Link
+              href={detailUrl}
+              className="inline-flex items-center gap-1.5 text-xs font-semibold !text-[#B85D19] underline"
+            >
+              <span>Read package details</span>
+              <ArrowRight size={13} className="transition-transform group-hover:translate-x-1" />
+            </Link>
           </div>
         </div>
       </div>
@@ -98,4 +114,3 @@ export function PackageCard({ pkg }: { pkg: DesertPackage }) {
     </article>
   );
 }
-
